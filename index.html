@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>codeMentor JS</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="#" class="logo">
+          <span class="logo-icon">&lt;/&gt;</span>
+          <span class="logo-text">codeMentor<em> JS</em></span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#challenges">Challenges</a></li>
+          <li><a href="#leaderboard">Leaderboard</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+        <div class="nav-cta">
+          <button class="btn-login">Login</button>
+          <button class="btn-register">Register</button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="grid-lines"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Write your code.<br />
+          <span class="accent">AI</span> feedback <br />
+          <span class="glow-text">Level Up</span>
+        </h1>
+        <p class="hero-sub">
+          On codeMentor JS you upload your code and get instant AI feedback.
+          Complete the challenges and get XP points.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn-register btn-lg">START NOW It's free →</button>
+          <button class="btn-outline btn-lg">Challenges</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num"> -- </span
+            ><span class="stat-label">Active Learners</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <span class="stat-num">100+</span
+            ><span class="stat-label">Challenges</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <span class="stat-num">%</span
+            ><span class="stat-label">Satisfaction</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-code-card">
+        <div class="code-card">
+          <div class="code-card-header">
+            <span class="dot red"></span><span class="dot yellow"></span
+            ><span class="dot green"></span>
+            <span class="code-lang">submission.js</span>
+          </div>
+          <pre
+            class="code-body"
+          ><code><span class="kw">function</span> <span class="fn">fibonacci</span>(<span class="param">n</span>) {
+  <span class="kw">if</span> (n &lt;= <span class="num">1</span>) <span class="kw">return</span> n;
+  <span class="kw">return</span> <span class="fn">fibonacci</span>(n-<span class="num">1</span>) + <span class="fn">fibonacci</span>(n-<span class="num">2</span>);
+}</code></pre>
+          <div class="ai-feedback-chip">
+            <span class="chip-icon">🤖</span>
+            <div>
+              <div class="chip-title">AI Feedback</div>
+              <div class="chip-text">
+                Recursion is correct, but memoization will take it to O(2ⁿ) →
+                O(n) !
+              </div>
+            </div>
+          </div>
+          <div class="xp-chip">+150 XP 🔥</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="section-inner">
+        <div class="section-tag">Why codeMentor JS?</div>
+        <h2 class="section-title">
+          Everything you need <br />
+          To level up as a programmer
+        </h2>
+        <div class="features-grid">
+          <div class="feat-card feat-card--accent">
+            <div class="feat-icon">🤖</div>
+            <h3>AI Code Feedback</h3>
+            <p>
+              Submit your code and get feedback on syntax errors, optimization,
+              and code style in seconds.
+            </p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">⚡</div>
+            <h3>Coding Challenges</h3>
+            <p>Hundreds of JavaScript tasks from Easy to Hard</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">🏆</div>
+            <h3>XP & Leaderboard</h3>
+            <p>
+              Get the XP points for the right answers. Beat your friends and get
+              the top spot on the Leaderboard.
+            </p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">💼</div>
+            <h3>Portfolio Builder</h3>
+            <p>
+              All solved challenges are automatically added to your portfolio.
+            </p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">🔐</div>
+            <h3>JWT Auth</h3>
+            <p>Secure registration and login. Your progress is always saved.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">📈</div>
+            <h3>Progress Tracking</h3>
+            <p>
+              See where you are, how much you've learned, and what you need to
+              work on.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="challenges-section" id="challenges">
+      <div class="section-inner">
+        <div class="section-tag">Challenges</div>
+        <h2 class="section-title">Start your first Challenge</h2>
+        <div class="diff-tabs">
+          <button class="diff-tab active" data-diff="all">All</button>
+          <button class="diff-tab" data-diff="easy">Easy 🟢</button>
+          <button class="diff-tab" data-diff="medium">Medium 🟡</button>
+          <button class="diff-tab" data-diff="hard">Hard 🔴</button>
+        </div>
+        <div class="challenges-grid" id="challengeGrid"></div>
+        <div class="challenges-footer">
+          <button class="btn-register">
+            Register to get all the challenges
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="submission-section" id="submit">
+      <div class="section-inner split">
+        <div class="split-text">
+          <div class="section-tag">AI Feedback Demo</div>
+          <h2 class="section-title">Try Now</h2>
+          <p>
+            Write any code and AI will instantly analyze it for syntax errors,
+            performance, and style.
+          </p>
+          <ul class="check-list">
+            <li>✅ Syntax Error Detection</li>
+            <li>✅ Optimization Tips</li>
+            <li>✅ Code Style Feedback</li>
+          </ul>
+        </div>
+        <div class="split-card">
+          <div class="editor-card">
+            <div class="editor-header">
+              <div class="editor-dots">
+                <span class="dot red"></span><span class="dot yellow"></span
+                ><span class="dot green"></span>
+              </div>
+              <select class="lang-select" id="langSelect">
+                <option>JavaScript</option>
+              </select>
+            </div>
+            <textarea
+              class="editor-area"
+              id="codeArea"
+              placeholder="// Enter your code here...
+function sum(x,y) {
+// Your solution
+}"
+            ></textarea>
+            <div class="editor-footer">
+              <button class="btn-register full-w" id="submitBtn">
+                <span id="btnText">🚀 GET AI Feedback</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="leaderboard-section" id="leaderboard">
+      <div class="section-inner">
+        <div class="section-tag">Leaderboard</div>
+        <h2 class="section-title">Top Coders this week</h2>
+        <div class="lb-table">
+          <div class="lb-head">
+            <span>Rank</span><span>User</span><span>XP</span><span>Streak</span
+            ><span>Level</span>
+          </div>
+          <div class="lb-row lb-row--gold">
+            <span class="rank">🥇</span>
+            <span class="user-info"
+              ><span class="avatar" style="background: #f59e0b">---</span
+              >---</span
+            >
+            <span class="xp-val">---</span>
+            <span class="streak">🔥 ---</span>
+            <span class="level-badge lv-gold">Lv.--</span>
+          </div>
+
+          <div class="lb-row lb-row--gold">
+            <span class="rank">🥈</span>
+            <span class="user-info"
+              ><span class="avatar" style="background: #f59e0b">---</span
+              >---</span
+            >
+            <span class="xp-val">---</span>
+            <span class="streak">🔥 ---</span>
+            <span class="level-badge lv-gold">Lv.--</span>
+          </div>
+
+          <div class="lb-row lb-row--gold">
+            <span class="rank">🥉</span>
+            <span class="user-info"
+              ><span class="avatar" style="background: #f59e0b">---</span
+              >---</span
+            >
+            <span class="xp-val">---</span>
+            <span class="streak">🔥 ---</span>
+            <span class="level-badge lv-gold">Lv.--</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-inner">
+        <h2>Are you ready for Coding Journey to start?</h2>
+        <p>Register Now, Don't need a credit.</p>
+        <button class="btn-register btn-lg">Sign Up</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="logo">
+          <span class="logo-icon">&lt;/&gt;</span>
+          <span class="logo-text">codeMentor<em> JS</em></span>
+        </div>
+        <span class="author">S 4 A K</span>
+        <div>
+          <p class="footer-copy">© 2026 codeMentor JS. Built with 💚</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
